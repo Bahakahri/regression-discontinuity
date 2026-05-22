@@ -58,13 +58,13 @@ LATE estimates (teal dots with 95% CI error bars) across five bandwidth choices 
 
 ![Placebo Cutoffs](outputs/placebo_cutoff_tests.png)
 
-LATE at real cutoff (675: $256, teal dot) vs placebo cutoffs (650, 700, 725: $3,410, $118, −$455, red dots). Real cutoff isolated in teal: placebos in red. Placebo at 650 dramatically larger, suggesting additional policy rule. Validates that 675 effect is specific to this threshold, not general FICO-loan relationship.
+LATE at real cutoff (675: $256, teal dot) vs placebo cutoffs (650, 700, 725: $3,410, $118, -$455, red dots). Real cutoff isolated in teal: placebos in red. Placebo at 650 dramatically larger, suggesting additional policy rule. Validates that 675 effect is specific to this threshold, not general FICO-loan relationship.
 
 ---
 
 ## Core Finding
 
-> Crossing the FICO 675 threshold causes an increase of **$256 in approved loan amounts** (95% CI: [$220, $293], p < 0.001). This is 1.7% of the mean loan amount ($15,047). The effect is robust to regression controls for income and credit utilization (confounding reduced from $509 → $256, demonstrating 49.7% was selection bias). However, placebo tests reveal Lending Club likely has multiple approval rules (e.g., 650 shows $3,410 effect), limiting generalizability to the 675 threshold.
+> Crossing the FICO 675 threshold causes an increase of **$256 in approved loan amounts** (95% CI: [$220, $293], p < 0.001). This is 1.7% of the mean loan amount ($15,047). The effect is robust to regression controls for income and credit utilization (confounding reduced from $509 => $256, demonstrating 49.7% was selection bias). However, placebo tests reveal Lending Club likely has multiple approval rules (e.g., 650 shows $3,410 effect), limiting generalizability to the 675 threshold.
 
 ---
 
@@ -86,7 +86,7 @@ Python · pandas · numpy · matplotlib · scipy · scikit-learn
 - `fico_range_low` Running variable (FICO score, 610–845)
 - `loan_amnt` Outcome (approved loan amount, $500–$40k)
 - `annual_inc` Control (annual income)
-- `dti` — Control (debt-to-income ratio)
+- `dti` Control (debt-to-income ratio)
 - `revol_util` Control (revolving credit utilization)
 
 **Confounding:** Borrowers below 675 are $7.6k lower income, higher debt-to-income (17.98 vs 18.39), higher credit utilization (60% vs 47%). Addressed via regression controls.
