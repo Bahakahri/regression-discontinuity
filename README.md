@@ -10,9 +10,9 @@ Causal inference on Lending Club lending decisions using sharp regression discon
 
 **Step 2: Raw Discontinuity Visualization** Plot loan amount vs FICO score with binned averages (5-point FICO bins). Fit separate trend lines above and below 675. Jump at cutoff indicates potential causal effect. Visual discontinuity is clear: trend flattens above 675 (loan amounts plateau), steep below 675 (amounts increase with FICO).
 
-**Step 3: McCrary Density Test** Estimate density of FICO scores on both sides of 675 via polynomial fitting. Test for discontinuous jump in density at cutoff. A jump > 10% suggests borrowers manipulate FICO to cross threshold, invalidating RDD. Result: 2.6% jump (PASS) → no manipulation detected.
+**Step 3: McCrary Density Test** Estimate density of FICO scores on both sides of 675 via polynomial fitting. Test for discontinuous jump in density at cutoff. A jump > 10% suggests borrowers manipulate FICO to cross threshold, invalidating RDD. Result: 2.6% jump (PASS) => no manipulation detected.
 
-**Step 4: Covariate Smoothness Test** Compare pre-treatment covariates (income, DTI, revolving utilization) below vs above 675 via t-tests. Imbalance indicates selection bias. Result: all covariates significantly different (p < 0.001) → include as regression controls. Effect with controls drops 49.7% ($509 → $256), illustrating importance of confounding correction.
+**Step 4: Covariate Smoothness Test** Compare pre-treatment covariates (income, DTI, revolving utilization) below vs above 675 via t-tests. Imbalance indicates selection bias. Result: all covariates significantly different (p < 0.001) => include as regression controls. Effect with controls drops 49.7% ($509 => $256), illustrating importance of confounding correction.
 
 **Step 5: Local Linear Regression (LATE Estimation)** Fit OLS on data within ±50 FICO bandwidth around 675. Two models: (1) without controls (biased, $509), (2) with controls for income/DTI/revolving util (unbiased, $256). Treatment coefficient = LATE. Compute 95% CI and t-test.
 
