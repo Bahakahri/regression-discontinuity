@@ -163,5 +163,3 @@ These are pre-treatment (determined before loan approval) and unbalanced across 
 2. **[Synthetic Control Method](https://github.com/Bahakahri/Synthetic-Control)** : SCM. Measures policy effect on a single treated unit via weighted counterfactual.
 
 3. **[Staggered Difference-in-Differences](https://github.com/Bahakahri/staggered-difference-in-differences)** : Callaway & Sant'Anna estimator. Handles staggered treatment with effect heterogeneity.
-
-4. **[Regression Discontinuity](https://github.com/Bahakahri/regression-discontinuity)** : Sharp RDD. Exploits policy cutoffs for causal inference.
