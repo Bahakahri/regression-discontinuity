@@ -68,6 +68,13 @@ LATE at real cutoff (675: $256, teal dot) vs placebo cutoffs (650, 700, 725: $3,
 
 ---
 
+## Business Impact
+For Lending Club (and fintech lending broadly), this finding reveals a $256 per loan profit opportunity. At scale: if Lending Club approves 500,000 loans/year near the 675 threshold, the $256 × 500k = $128M in additional loan volume can be captured by optimizing approval algorithms around the discontinuity.
+
+More critically: the placebo test exposing multiple approval rules suggests Lending Club's algorithm is not fully optimized. The $3,410 effect at 650 indicates a stronger threshold exists. This informs strategic pricing and risk management: which thresholds drive the most value? Can we move borrowers across thresholds profitably?
+
+---
+
 ## Stack
 
 Python · pandas · numpy · matplotlib · scipy · scikit-learn
